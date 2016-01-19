@@ -87,7 +87,7 @@
       } else {
           console.log("User is logged out");
       }
-    
+    console.log($scope.currentUser.github.displayName);
     $scope.logout = function(loginProvider){
         $scope.currentUser = null;
     }
@@ -163,7 +163,7 @@ The Singapore Government has launched a scheme where they will pay university st
 
 <!-- Show this div when the users is logged in -->
 <div ng-show="currentUser">
-  You are logged in as: {{currentUser.github.displayName}} <br><br>
+  You are logged in as: {{$scope.currentUser.github.displayName}} <br><br>
   <button class="btn btn-success" ng-click="editFeedback('new')">
     <span class="glyphicon"></span>Click here to leave feedback.
   </button>
